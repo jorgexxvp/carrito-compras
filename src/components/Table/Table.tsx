@@ -4,9 +4,10 @@ import {
   Pagination,
   Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, useMediaQuery
 } from '@mui/material'
-import { FC } from 'react'
+import {
+  FC, useState
+} from 'react'
 
-import { usePage } from '../../assets/zustand/pageState'
 import { IProductResponse } from '../../core/domain/models/Products'
 import { FormatText } from '../../toolbox/helpers/FormatText'
 import styles from './Table.module.sass'
@@ -24,9 +25,9 @@ export const TableComponent: FC<ITableProps> = ({
   columns, rows
 }) => {
 
-  const {
+  const [
     page, setPage
-  } = usePage()
+  ] = useState(1)
 
   const rowsPerPage = 5
 
@@ -49,7 +50,7 @@ export const TableComponent: FC<ITableProps> = ({
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row) => (
+            {rows.slice((page - 1) * rowsPerPage, page * rowsPerPage).map((row) => (
               <TableRow
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}

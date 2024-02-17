@@ -1,5 +1,5 @@
 import {
-  Box, Button, Menu
+  Box, Button, Menu, styled
 } from '@mui/material'
 import {
   FC, MouseEvent, useCallback, useEffect
@@ -20,6 +20,14 @@ export const MenuComponent: FC<IMenuProps> = ({
   const {
     cart, setCart
   } = useCart()
+
+  const CustomMenu = styled(Menu)(({ theme }) => ({
+    '& .MuiPaper-root': {
+      overflowY: 'scroll',
+      color: theme.palette.text.primary,
+    },
+    '& .MuiPaper-root::-webkit-scrollbar': { display: 'none', },
+  }))
 
   const handleCloseMenu = useCallback(
     (event: MouseEvent<HTMLElement>) => {
@@ -57,8 +65,10 @@ export const MenuComponent: FC<IMenuProps> = ({
   }, [cart])
 
   return (
-    <Menu
+
+    <CustomMenu
       anchorEl={anchorEl}
+      sx={{ overflowY: 'hidden!important' }}
       anchorOrigin={{
         vertical: 'bottom',
         horizontal: 'right',
@@ -72,8 +82,9 @@ export const MenuComponent: FC<IMenuProps> = ({
       onClose={OnClose}
       onMouseLeave={handleCloseMenu}
     >
+
       <Box className={styles.Menu}>
-        <Box className={styles.MenuBody}>
+        <Box className={styles.MenuBody} >
           {cart && cart.length > 0 ? <>
             {
               cart.map((product, index) =>
@@ -86,6 +97,7 @@ export const MenuComponent: FC<IMenuProps> = ({
           <Button className={styles.Button} onClick={handleClick}>PROCEDER CON EL PAGO</Button>
         }
       </Box>
-    </Menu >
+    </CustomMenu >
+
   )
 }
