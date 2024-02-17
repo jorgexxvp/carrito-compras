@@ -21,12 +21,11 @@ interface IProps {
 export const Product: FC<IProps> = ({ product }) => {
 
   const { setCart } = useCart()
-  const handleAddProduct = () => {
 
+
+  const handleAddProduct = () => {
     const updatedCantidad = product.cantidad + 1
     updateCart(updatedCantidad)
-
-
   }
 
   const handleRemoveProduct = () => {

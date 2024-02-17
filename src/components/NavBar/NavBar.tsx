@@ -23,7 +23,7 @@ export const NavBar = () => {
   }
 
   return (
-    <AppBar position='static' sx={{ backgroundColor: '#009640' }}>
+    <AppBar position='static' sx={{ backgroundColor: '#EEF3F7' }}>
       <Toolbar className={styles.TabBar}>
         <Box className={styles.Logo}>
           <LogoIcon />
@@ -45,6 +45,7 @@ export const NavBar = () => {
           >
             <Typography variant='h6' component='div' sx={{
               flexGrow: 1,
+              color: '#000',
               fontSize: 'clamp(0.75rem, 0.583rem + 0.741vw, 1.25rem)'
             }}>
               Historial
@@ -53,7 +54,8 @@ export const NavBar = () => {
           <IconButton
             sx={{
               margin: '0px',
-              padding: '0px'
+              padding: '0px',
+              color: '#000',
             }}
             size='large'
             aria-label='account of current user'

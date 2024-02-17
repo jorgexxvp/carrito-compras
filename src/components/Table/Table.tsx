@@ -35,7 +35,7 @@ export const TableComponent: FC<ITableProps> = ({
     setPage(newPage)
   }
 
-  const isSm = useMediaQuery('(min-width: 600px)')
+  const isLg = useMediaQuery('(min-width: 900px)')
 
   return (
     <Box>
@@ -63,7 +63,7 @@ export const TableComponent: FC<ITableProps> = ({
                     </figure>
                   </TableCell>
                 </Hidden>
-                <TableCell>{FormatText(row.title, isSm ? 15 : 50)}</TableCell>
+                <TableCell>{FormatText(row.title, isLg ? 100 : 50)}</TableCell>
                 <Hidden smDown>
                   <TableCell >{row.category}</TableCell>
                 </Hidden>

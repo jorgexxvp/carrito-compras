@@ -9,12 +9,17 @@
 .Card
   width: 300px
   height: 300px
-  border: 1px solid #414141
   border-radius: 15px
   display: flex
   padding: 10px
   flex-direction: column
   align-items: center
+  box-shadow: 5px 5px 10px 5px rgba(195, 195, 195, 0.5)
+
+.Card:hover
+  width: 305px
+  transition: 0.3s
+  height: 305px
 
 
 .CardBody
@@ -24,9 +29,6 @@
   text-align: center
   height: 280px
 
-
-.Card:hover
-  background-color: #eaeaea
 
 
 .Pagination
@@ -50,13 +52,13 @@
 
 
 .Button
-  background-color: #02bb52 !important
-  color: #fff !important
+  background-color: #EEF3F7 !important
+  color: #1324bf !important
   width: 250px
   transition: 0.5s
 
 .Button:hover
-  background-color: #047535 !important
+  background-color: #dedede !important
 
 .GroupTop
   display: flex

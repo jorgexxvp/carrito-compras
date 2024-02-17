@@ -79,7 +79,6 @@ const Card: FC<ICardProps> = ({ product }) => {
     }
 
     setCart(prevData)
-
     localStorage.setItem('Cart', JSON.stringify(prevData))
   }
 

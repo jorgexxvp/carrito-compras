@@ -59,7 +59,6 @@ export const MenuComponent: FC<IMenuProps> = ({
     OnClose()
   }
 
-
   useEffect(() => {
     setCart(cart)
   }, [cart])
