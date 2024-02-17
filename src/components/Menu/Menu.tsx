@@ -48,6 +48,7 @@ export const MenuComponent: FC<IMenuProps> = ({
     localStorage.removeItem('Cart')
 
     alert('Se ha realizado el pago')
+    OnClose()
   }
 
 

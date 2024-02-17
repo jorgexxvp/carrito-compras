@@ -40,8 +40,6 @@ export const GroupProducts: FC<IGroupProductsProps> = ({ rows }) => {
     setPage(newPage)
   }
 
-
-
   return (
     <Box>
 
@@ -51,11 +49,7 @@ export const GroupProducts: FC<IGroupProductsProps> = ({ rows }) => {
         ))}
       </Box>
 
-      <Box className={styles.Pagination} sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        marginTop: 2
-      }}>
+      <Box className={styles.Pagination} >
         <Pagination
           count={Math.ceil(rows.length / rowsPerPage)}
           page={page}
