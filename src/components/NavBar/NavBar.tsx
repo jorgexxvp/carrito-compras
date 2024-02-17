@@ -23,7 +23,7 @@ export const NavBar = () => {
   }
 
   return (
-    <AppBar position='static' sx={{ backgroundColor: '#EEF3F7' }}>
+    <AppBar position='sticky' sx={{ backgroundColor: '#EEF3F7' }}>
       <Toolbar className={styles.TabBar}>
         <Box className={styles.Logo}>
           <LogoIcon />
