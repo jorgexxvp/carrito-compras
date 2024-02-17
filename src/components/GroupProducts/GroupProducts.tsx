@@ -80,6 +80,7 @@ const Card: FC<ICardProps> = ({ product }) => {
 
     setCart(prevData)
     localStorage.setItem('Cart', JSON.stringify(prevData))
+    alert('Se ha agregado el producto')
   }
 
   return (
