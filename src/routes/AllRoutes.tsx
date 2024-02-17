@@ -31,4 +31,3 @@ const AllRoutes = () => {
 }
 
 export default AllRoutes
-gr
