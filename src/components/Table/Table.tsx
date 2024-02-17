@@ -43,7 +43,7 @@ export const TableComponent: FC<ITableProps> = ({
           <TableHead>
             <TableRow>
               {columns.map((column, index) =>
-                <TableCell key={index} align='center'>{column}</TableCell>
+                <TableCell key={index}>{column}</TableCell>
               )}
 
             </TableRow>
@@ -54,9 +54,9 @@ export const TableComponent: FC<ITableProps> = ({
                 key={row.id}
                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
               >
-                <TableCell align='right'>{row.id}</TableCell>
+                <TableCell >{row.id}</TableCell>
                 <Hidden smDown>
-                  <TableCell align='right'>
+                  <TableCell >
                     <figure className={styles.Image}>
                       <img src={row.image} alt='table-image' />
                     </figure>
@@ -64,9 +64,9 @@ export const TableComponent: FC<ITableProps> = ({
                 </Hidden>
                 <TableCell>{FormatText(row.title, isSm ? 15 : 50)}</TableCell>
                 <Hidden smDown>
-                  <TableCell align='right'>{row.category}</TableCell>
+                  <TableCell >{row.category}</TableCell>
                 </Hidden>
-                <TableCell align='right'>$/.{row.cantidad * row.price}</TableCell>
+                <TableCell>$/.{row.cantidad * row.price}</TableCell>
               </TableRow>
             ))}
           </TableBody>
