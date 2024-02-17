@@ -1,5 +1,5 @@
 import {
-  Box, Button, Menu, styled
+  Box, Button, Menu
 } from '@mui/material'
 import {
   FC, MouseEvent, useCallback, useEffect
@@ -9,27 +9,17 @@ import { useCart } from '../../assets/zustand/CartState'
 import { Product } from '../Cards/Products'
 import styles from './Menu.module.sass'
 
-
-
 interface IMenuProps {
   anchorEl: null | HTMLElement;
   OnClose: () => void;
 }
 
 export const MenuComponent: FC<IMenuProps> = ({
-  anchorEl, OnClose,
+  anchorEl, OnClose
 }) => {
   const {
     cart, setCart
   } = useCart()
-
-  const CustomMenu = styled(Menu)(({ theme }) => ({
-    '& .MuiPaper-root': {
-      overflowY: 'scroll',
-      color: theme.palette.text.primary,
-    },
-    '& .MuiPaper-root::-webkit-scrollbar': { display: 'none', },
-  }))
 
   const handleCloseMenu = useCallback(
     (event: MouseEvent<HTMLElement>) => {
@@ -54,21 +44,21 @@ export const MenuComponent: FC<IMenuProps> = ({
 
     localStorage.setItem('Record', JSON.stringify(updatedRecords))
 
+    setCart([])
     localStorage.removeItem('Cart')
 
     alert('Se ha realizado el pago')
     OnClose()
   }
 
+
   useEffect(() => {
     setCart(cart)
   }, [cart])
 
   return (
-
-    <CustomMenu
+    <Menu
       anchorEl={anchorEl}
-      sx={{ overflowY: 'hidden!important' }}
       anchorOrigin={{
         vertical: 'bottom',
         horizontal: 'right',
@@ -82,9 +72,8 @@ export const MenuComponent: FC<IMenuProps> = ({
       onClose={OnClose}
       onMouseLeave={handleCloseMenu}
     >
-
       <Box className={styles.Menu}>
-        <Box className={styles.MenuBody} >
+        <Box className={styles.MenuBody}>
           {cart && cart.length > 0 ? <>
             {
               cart.map((product, index) =>
@@ -97,7 +86,6 @@ export const MenuComponent: FC<IMenuProps> = ({
           <Button className={styles.Button} onClick={handleClick}>PROCEDER CON EL PAGO</Button>
         }
       </Box>
-    </CustomMenu >
-
+    </Menu >
   )
 }
