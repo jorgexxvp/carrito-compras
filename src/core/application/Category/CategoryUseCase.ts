@@ -7,7 +7,7 @@ export class CategoryUseCase {
   constructor(repo: CategoryRepository) {
     this.repo = repo
   }
-  public async updateBarSocialMedia() {
+  public async getCatogories() {
     return this.repo.CategoryListHandler()
   }
 }

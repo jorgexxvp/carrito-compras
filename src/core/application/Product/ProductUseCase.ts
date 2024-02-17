@@ -7,7 +7,7 @@ export class ProductUseCase {
     this.repo = repo
   }
 
-  public async updateBarSocialMedia() {
+  public async getProducts() {
     return await this.repo.ProductListHandler()
   }
 }

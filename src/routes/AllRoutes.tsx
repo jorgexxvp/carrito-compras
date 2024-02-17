@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 
 import { Home } from '../view/Home/Home'
+import { Record } from '../view/Record/Record'
 
 const NotFoundPage: FC = () => {
     const navigate = useNavigate()
@@ -23,7 +24,7 @@ const AllRoutes = () => {
     return (
         <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='/payment' element={<div>bbbbbbbbbb</div>} />
+            <Route path='/record' element={<Record />} />
             <Route path='*' element={<NotFoundPage />} />
         </Routes>
     )

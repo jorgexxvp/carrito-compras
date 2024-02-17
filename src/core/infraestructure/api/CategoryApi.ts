@@ -1,19 +1,17 @@
 
-import {
-  AxiosRequestConfig, AxiosResponse
-} from 'axios'
+import { AxiosRequestConfig } from 'axios'
 
-import { PublicApi } from '../Api'
 import { CategoryRepository } from '../../domain/repositories/CategoryRepository'
+import { PublicApi } from '../Api'
 
 export class CategoryApi extends PublicApi implements CategoryRepository {
   constructor(config?: AxiosRequestConfig) {
     super(config)
   }
   public CategoryListHandler = async () => {
-    const { data } = await this.get<AxiosResponse<string[]>>(
+    const { data } = await this.get<string[]>(
       '/products/categories'
     )
-    return data.data
+    return data
   }
 }

@@ -1,6 +1,7 @@
 import axios, {
-  AxiosInstance, AxiosRequestConfig, AxiosResponse, InternalAxiosRequestConfig
+  AxiosInstance, AxiosRequestConfig, AxiosResponse
 } from 'axios'
+
 import { API_URL } from '../../toolbox/constants/Environments'
 
 class Api {
@@ -56,12 +57,6 @@ export class PublicApi extends Api {
       baseURL: API_URL
     })
 
-    this.api.interceptors.request.use(async (param: InternalAxiosRequestConfig) => {
-      return {
-        ...param,
-        url: param.url
-      }
-    })
   }
 }
 

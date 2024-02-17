@@ -1,0 +1,2 @@
+export { TableComponent } from './Table'
+

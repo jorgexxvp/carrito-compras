@@ -1,0 +1,2 @@
+export { GroupProducts } from './GroupProducts'
+

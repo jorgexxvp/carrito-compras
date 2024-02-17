@@ -11,5 +11,5 @@ const productApi = new ProductApi({ baseURL: API_URL })
 
 // Client
 
-export const clientGetCategories = new CategoryUseCase(categoryApi)
-export const clientGetProducts = new ProductUseCase(productApi)
+export const clientCategories = new CategoryUseCase(categoryApi)
+export const clientProducts = new ProductUseCase(productApi)

@@ -1,7 +1,5 @@
 
-import {
-  AxiosRequestConfig, AxiosResponse
-} from 'axios'
+import { AxiosRequestConfig } from 'axios'
 
 import { IProductResponse } from '../../domain/models/Products'
 import { ProductsRepository } from '../../domain/repositories/ProductRepository'
@@ -12,9 +10,9 @@ export class ProductApi extends PublicApi implements ProductsRepository {
     super(config)
   }
   public ProductListHandler = async () => {
-    const { data } = await this.get<AxiosResponse<IProductResponse[]>>(
+    const { data } = await this.get<IProductResponse[]>(
       '/products'
     )
-    return data.data
+    return data
   }
 }

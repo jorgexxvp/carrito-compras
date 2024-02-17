@@ -1,0 +1,19 @@
+.Layout
+  display: flex
+  gap: 30px
+  padding: 20px
+  flex-direction: column
+  
+.CategorySection
+  display: grid
+  grid-template-columns: repeat( auto-fit, minmax(140px, 1fr) )
+  justify-items: center
+  gap: 15px
+  
+
+@media only screen and (min-width: 450px) 
+  .CategorySection
+    grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) )
+
+
+

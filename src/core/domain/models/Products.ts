@@ -15,5 +15,5 @@ export interface IProductResponse {
   description: string;
   category: string;
   image: string;
-  rate: IRating;
+  rating: IRating;
 }
