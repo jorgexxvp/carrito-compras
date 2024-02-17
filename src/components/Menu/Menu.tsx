@@ -9,13 +9,15 @@ import { useCart } from '../../assets/zustand/CartState'
 import { Product } from '../Cards/Products'
 import styles from './Menu.module.sass'
 
+
+
 interface IMenuProps {
   anchorEl: null | HTMLElement;
   OnClose: () => void;
 }
 
 export const MenuComponent: FC<IMenuProps> = ({
-  anchorEl, OnClose
+  anchorEl, OnClose,
 }) => {
   const {
     cart, setCart
@@ -52,7 +54,6 @@ export const MenuComponent: FC<IMenuProps> = ({
 
     localStorage.setItem('Record', JSON.stringify(updatedRecords))
 
-    setCart([])
     localStorage.removeItem('Cart')
 
     alert('Se ha realizado el pago')

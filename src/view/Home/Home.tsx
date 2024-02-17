@@ -49,7 +49,6 @@ export const Home = () => {
         </Box>
         <GroupProducts rows={filterData} />
       </Box>
-
     </Box>
   )
 }
