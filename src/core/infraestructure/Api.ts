@@ -49,7 +49,6 @@ class Api {
 }
 
 export class PublicApi extends Api {
-  private static instance: PublicApi
 
   public constructor(config?: AxiosRequestConfig) {
     super({

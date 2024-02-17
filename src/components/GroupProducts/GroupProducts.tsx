@@ -36,7 +36,8 @@ export const GroupProducts: FC<IGroupProductsProps> = ({ rows }) => {
 
   const rowsPerPage = 5
 
-  const handleChangePage = (event: React.ChangeEvent<unknown>, newPage: number) => {
+  const handleChangePage = (_event: React.ChangeEvent<unknown>, newPage: number) => {
+
     setPage(newPage)
   }
 
