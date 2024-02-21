@@ -8,11 +8,11 @@ import {
 } from '@mui/material'
 import React, { FC } from 'react'
 
-import { useCart } from '../../assets/zustand/CartState'
-import { usePage } from '../../assets/zustand/pageState'
 import { IProductResponse } from '../../core/domain/models/Products'
 import { FirstLetter } from '../../toolbox/helpers/FirstLetter'
 import { FormatText } from '../../toolbox/helpers/FormatText'
+import { useCart } from '../../zustand/CartState'
+import { usePage } from '../../zustand/pageState'
 import styles from './GroupProducts.module.sass'
 interface IGroupProductsProps {
   rows: IProductResponse[]

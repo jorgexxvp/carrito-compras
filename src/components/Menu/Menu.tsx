@@ -5,7 +5,7 @@ import {
   FC, MouseEvent, useCallback, useEffect
 } from 'react'
 
-import { useCart } from '../../assets/zustand/CartState'
+import { useCart } from '../../zustand/CartState'
 import { Product } from '../Cards/Products'
 import styles from './Menu.module.sass'
 

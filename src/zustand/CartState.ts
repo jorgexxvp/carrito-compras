@@ -1,7 +1,7 @@
 
 import { create } from 'zustand'
 
-import { IProductResponse } from '../../core/domain/models/Products'
+import { IProductResponse } from '../core/domain/models/Products'
 interface IProductsProps extends IProductResponse {
   cantidad: number;
 }

@@ -1,6 +1,6 @@
 import './App.css'
 
-import { QueryContextProvider } from './core/contexts/QueryContext'
+import { QueryContextProvider } from './contexts/QueryContext'
 import AllRoutes from './routes/AllRoutes'
 
 

@@ -5,9 +5,9 @@ import {
 } from '@mui/material'
 import { FC } from 'react'
 
-import { useCart } from '../../../assets/zustand/CartState'
 import { IProductResponse } from '../../../core/domain/models/Products'
 import { FormatText } from '../../../toolbox/helpers/FormatText'
+import { useCart } from '../../../zustand/CartState'
 import styles from './Product.module.sass'
 
 interface IProductsProps extends IProductResponse {

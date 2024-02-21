@@ -4,7 +4,6 @@ import {
   useEffect, useState
 } from 'react'
 
-import { usePage } from '../../assets/zustand/pageState'
 import { Category } from '../../components/Cards/Category'
 import { GroupProducts } from '../../components/GroupProducts/GroupProducts'
 import { NavBar } from '../../components/NavBar'
@@ -12,6 +11,7 @@ import { IProductResponse } from '../../core/domain/models/Products'
 import {
   ElectronicImage, JeweleryImage, MenClothing, WomanClothing
 } from '../../toolbox/constants/icons'
+import { usePage } from '../../zustand/pageState'
 import {
   useGeCategories, useGetProducts
 } from './Home.hook'
