@@ -10,7 +10,7 @@ export class CategoryApi extends PublicApi implements CategoryRepository {
   }
   public CategoryListHandler = async () => {
     const { data } = await this.get<string[]>(
-      '/products/categories'
+      '/products/categories',
     )
     return data
   }
